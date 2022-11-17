@@ -1,0 +1,19 @@
+{
+  "name": "web-resources",
+  "version": "1.0.0",
+  "description": "Bundled Web Resources for Personal Use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tippitytapp/webresources.git"
+  },
+  "author": "Marc Tapp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tippitytapp/webresources/issues"
+  },
+  "homepage": "https://github.com/tippitytapp/webresources#readme"
+}

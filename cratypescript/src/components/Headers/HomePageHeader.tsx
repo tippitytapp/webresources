@@ -3,9 +3,9 @@ import React from "react";
 export default function HomePageHeader(){
     return (
         <header className="App-header">
-            <h3>{"Welcome to the"}</h3>
-            <h1>{"Wonderful World of WebDev"}</h1>
-            <h6>{"( a collection of works created, revised, and hopefully improved by Marc Tapp )"}</h6>
+            <h6>{"Please take your time, look around 👀, "}</h6>
+            <h6>{"It's nothing extravagant... but its HOME 🏠"}</h6>
+            <h1>{"Welcome!"}</h1>
       </header>
     )
 }

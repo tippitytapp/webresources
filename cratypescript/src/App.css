@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-header {
@@ -7,12 +9,37 @@
   min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2%;
+  border: 1px solid #5a5a5a;
+  border-radius:8px;
+  box-shadow: 2px 2px 2px 2px #5a5a5a;
+  width: 60vw;
+  z-index: 1;
+  position: relative;
+  top: -20px;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+.navigation-bar{
+  background-color: #282c34;
+  color: white;
+  height: 2.5vh;
+  padding: 2% 1% 1% 2%;
+  width: 96%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.legendary_pic{
+width: 100%;  
+max-height: 12vh;
+
+}
+

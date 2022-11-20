@@ -1,0 +1,71 @@
+{
+    "inputFields":{
+        "rows":[
+            [
+                {
+                    "name": "firstName",
+                    "type": "TEXT",
+                    "placeholder": " First Name...",
+                    "label":"First Name:",
+                    "required":true
+                },
+                {
+                    "name": "lastName",
+                    "type": "TEXT",
+                    "placeholder": "Last Name...",
+                    "label":"Last Name:",
+                    "required":true
+                }
+            ],
+            [
+                {
+                    "name": "email",
+                    "type": "EMAIL",
+                    "placeholder": "Email...",
+                    "label":"Email:",
+                    "required":true
+                }
+            ],
+            [
+                {
+                    "name": "phone",
+                    "type": "TEL",
+                    "placeholder": "Phone Number...",
+                    "label":"Phone:",
+                    "required":false
+                },
+                {
+                    "name": "callbackRequeted",
+                    "type":"CHECKBOX",
+                    "placeholder":"",
+                    "label":"Callback Requested",
+                    "required": "true",
+                    "checked":false
+                }
+            ],
+            [
+                {
+                    "name":"message",
+                    "type":"TEXTAREA",
+                    "placeholder": "Enter message...",
+                    "label":"Question or Comments?",
+                    "required": true
+                }
+            ]
+        ],
+        "buttons":[
+            {
+                "name": "clear",
+                "type":"CLEAR",
+                "label":"Clear",
+                "secondary": true
+            },
+            {
+                "name": "submit",
+                "type":"SUBMIT",
+                "label":"SUBMIT",
+                "secondary":false
+            }
+        ]
+    }
+}

@@ -1,0 +1,47 @@
+.footer-container{
+    background-color: #282c34;
+    color: white;
+    height: 2.5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    padding: 1% 2% 1% 1%;
+}
+
+.contact-form-modal{
+    height: 399px;
+    width: 400px;
+    border: 1px solid #282c34;
+    border-radius: 8px;
+    padding: 2%;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    z-index: 999;
+    background-color: azure;
+}
+.contact-form-header{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+}
+.contact-form-header-title{
+    width: 100%;
+    font-size: 18px;
+}
+
+.close-button{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #282c34;
+    border-radius: 50%;
+    text-align: center;
+    background-color: beige;
+    font-size: 14px;
+    font-weight: bolder;
+}

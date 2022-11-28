@@ -47,5 +47,8 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./src/enzyme.setup.js"
+  },
+  "webpack": {
+    "setupMiddlewares":{}
   }
 }

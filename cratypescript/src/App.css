@@ -43,3 +43,20 @@ max-height: 12vh;
 
 }
 
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.tab-delimiter{
+  width: 0px;
+  border:1px solid darkgrey;
+  height: 1.75vh;
+}
+
+.title{
+  font-size: larger;
+  font-weight: bolder;
+  padding-bottom: 5px;
+  cursor: pointer;
+}

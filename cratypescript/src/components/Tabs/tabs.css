@@ -1,0 +1,27 @@
+.navigation-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.app-tab{
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    
+}
+.app-tab:hover{
+    bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.tab-active{
+    bottom: 5px;
+    border-bottom: 1px solid white;
+}

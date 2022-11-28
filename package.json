@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tippitytapp/webresources/issues"
   },
-  "homepage": "https://github.com/tippitytapp/webresources#readme"
+  "homepage": "https://github.com/tippitytapp/webresources#readme",
+  "dependencies": {
+    "react-router-dom": "^6.4.3"
+  }
 }

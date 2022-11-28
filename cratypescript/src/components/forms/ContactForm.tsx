@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "../Buttons/Button";
 import FormRows from "../formfields/FormRows";
 
 interface ContactFormProps {
@@ -7,7 +8,16 @@ interface ContactFormProps {
 }
 
 export default function ContactForm(props:ContactFormProps){
-    console.log(props)
+    let {inputFields} = props;
+    inputFields = inputFields["default"]?.inputFields
+    const [formData, setFormData] = useState({})
+    const handleChange = (event:any) => {
+        let target = event.target;
+        let name = target?.name;
+        let value = target?.value;
+        let checked = target?.checked
+        setFormData({...formData, [name]:checked ? checked : value})
+    }
     return (
         <div className="contact-form-modal">
             <div className="contact-form-header">
@@ -20,7 +30,12 @@ export default function ContactForm(props:ContactFormProps){
             </div>
             <div className="contact-form-body">
                 <div className="contact-form-inputs">
-                    {props.inputFields?.rows ? <FormRows rows={props.inputFields.rows}/> : null}
+                    {inputFields.rows ? <FormRows rows={inputFields.rows} handleChange={handleChange}/> : null}
+                </div>
+                <div className="contact-form-inputs">
+                    {inputFields.buttons ? inputFields.buttons.map((btn:any) => {
+                        return <Button {...btn}/>
+                    }) : null}
                 </div>
             </div>
         </div>

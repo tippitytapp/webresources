@@ -9,13 +9,14 @@ export interface ButtonProps {
 }
 export default function Button(props: ButtonProps){
     let {id, name, type, label, secondary, onClick} = props
+    console.log(props)
     return (
         <button 
             id={id}
             name={name}
             type={type}
             className={secondary ? "form-button-secondary" : "form-button-primary"}
-            onClick={onClick}
+            onClick={()=>onClick()}
         >{label}</button>
     )
 }

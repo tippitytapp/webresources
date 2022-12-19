@@ -40,11 +40,11 @@
                     "placeholder": "Phone Number...",
                     "label":"Phone:",
                     "required":false,
-                    "pattern":"[0-9]{3}-[0-9]{2}-[0-9]{3}",
+                    "pattern":"[0-9]{3}-[0-9]{3}-[0-9]{4}",
                     "inputMode": "tel"
                 },
                 {
-                    "id":"callbackrequested",
+                    "id":"callbackRequested",
                     "name": "callbackRequeted",
                     "type":"CHECKBOX",
                     "placeholder":"",
@@ -61,7 +61,8 @@
                     "placeholder": "Enter message...",
                     "label":"Question or Comments?",
                     "required": true,
-                    "inputMode":"text"
+                    "inputMode":"text",
+                    "minlength":"10"
                 }
             ]
         ],

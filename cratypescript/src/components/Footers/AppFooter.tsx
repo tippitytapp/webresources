@@ -1,18 +1,23 @@
-import React, { useState } from "react";
-import ContactForm from "../forms/ContactForm";
+import React, { useEffect, useState } from "react";
+import ContactForm from "../forms/contactform/ContactForm";
 import * as inputFields from "../../templates/contactform.json"
 import "./Footer.css"
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+import { toggleForm } from "../../store/actions/contactFormActionsReducer";
+import { useDispatch } from "react-redux";
+
 export default function Footer(){
-    const [showContactForm, setShowContactForm]=useState(false);
-    
+const showContactForm = useSelector((state:RootState)=>state?.form.showForm)
+const dispatch = useDispatch()
 
     return (
         <>
-        {showContactForm ? <ContactForm closeCForm={()=>setShowContactForm(false)} inputFields={inputFields}/> : null}
+        {showContactForm ? <ContactForm closeCForm={()=>dispatch(toggleForm(false))} inputFields={inputFields}/> : null}
         <div className="footer-container">
             <div className="footer-left">FooterLeft</div>
             <div className="footer-center">FooterCenter</div>
-            <div className="footer-right" onClick={(e)=>{ e.preventDefault();setShowContactForm(true)}}>Have a question?</div>
+            <div className="footer-right" onClick={(e)=>{ e.preventDefault();dispatch(toggleForm(true))}}>Have a question?</div>
             
         </div>
         </>

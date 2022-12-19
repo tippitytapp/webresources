@@ -10,7 +10,7 @@ export default function FormRows(props:FormRowsProps){
     return (
         <div className="form-rows-container">
             {Array.isArray(props?.rows) && props.rows.map((row, i)=>{
-               return <FormFields inputArray={row} handleChange={props.handleChange}/>
+               return <FormFields key={`${props?.rows?.length}:${i}`} inputArray={row} handleChange={props.handleChange}/>
             })
             }
         </div>

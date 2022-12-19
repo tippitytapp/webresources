@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/tippitytapp/webresources#readme",
   "dependencies": {
-    "react-router-dom": "^6.4.3"
+    "@types/redux-logger": "^3.0.9",
+    "react-router-dom": "^6.4.3",
+    "redux-logger": "^3.0.6"
   }
 }

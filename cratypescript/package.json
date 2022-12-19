@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -10,6 +12,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-redux": "^7.1.24",
+    "axios": "^1.2.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.7",
     "react": "^18.2.0",
@@ -19,6 +23,7 @@
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
     "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
     "typescript": "^4.4.2"
   },
   "scripts": {
@@ -49,6 +54,6 @@
     "setupTestFrameworkScriptFile": "./src/enzyme.setup.js"
   },
   "webpack": {
-    "setupMiddlewares":{}
+    "setupMiddlewares": {}
   }
 }

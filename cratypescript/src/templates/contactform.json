@@ -37,7 +37,7 @@
                     "id":"phone",
                     "name": "phone",
                     "type": "TEL",
-                    "placeholder": "Phone Number...",
+                    "placeholder": "Phone Number... XXX-XXX-XXXX",
                     "label":"Phone:",
                     "required":false,
                     "pattern":"[0-9]{3}-[0-9]{3}-[0-9]{4}",

@@ -12,8 +12,8 @@
 }
 
 .contact-form-modal{
-    height: 399px;
-    width: 400px;
+    height: 50vh;
+    width: 40vw;
     border: 1px solid #282c34;
     border-radius: 8px;
     padding: 2%;

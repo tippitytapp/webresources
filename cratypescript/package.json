@@ -16,8 +16,12 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/redux-logger": "^3.0.9",
     "axios": "^1.2.1",
+    "css-loader": "^6.7.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.7",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -28,13 +32,17 @@
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
-    "typescript": "^4.4.2"
+    "style-loader": "^3.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +66,24 @@
     "setupTestFrameworkScriptFile": "./src/enzyme.setup.js"
   },
   "webpack": {
-    "setupMiddlewares": {}
+    "setupMiddlewares": {},
+    "module": {
+      "rules": [
+        {
+          "test": "/\\.less$/",
+          "use": [
+            {
+              "loader": "style-loader"
+            },
+            {
+              "loader": "css-loader"
+            },
+            {
+              "loader": "less-loader"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

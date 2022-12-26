@@ -1,5 +1,5 @@
-import React from "react";
-import {Routes,Route, useParams} from "react-router-dom";
+import React, { useEffect } from "react";
+import {Routes,Route, useParams, useLocation} from "react-router-dom";
 import App from "../App";
 import HomePageHeader from "../components/Headers/HomePageHeader";
 import { linnks } from "../templates/links";
@@ -19,11 +19,21 @@ switch(templateType){
 }
 
 export default function AppRouter(){
+    const location = useLocation()
+    useEffect(()=>{
+        location.pathname = "/home"
+    },[])
     return (
         <Routes>
+            
             <Route path="/" element={<App/>}>
-                <Route path="home" element={<HomePageHeader/>}></Route>
-                {Array.isArray(linnks) ? linnks.map((ro, ind) => <Route key={ind} path={ro?.link} element={<iframe style={{color: "red", fontSize: "200px"}}>{ro.displayName}</iframe>}/>): null}
+                <Route path="/home" element={<HomePageHeader/>}></Route>
+                {Array.isArray(linnks) ? linnks.map((ro, ind) =>{
+                    console.log(linnks, ro)
+                    return  (<Route key={ind} path={ro?.link} element={<div style={{color: "red", fontSize: "200px"}}>{ro.displayName}</div>}/>)
+                    }
+                    )
+                    : null}
             </Route>
         </Routes>
     )

@@ -15,8 +15,8 @@ const dispatch = useDispatch()
         <>
         {showContactForm ? <ContactForm closeCForm={()=>dispatch(toggleForm(false))} inputFields={inputFields}/> : null}
         <div className="footer-container">
-            <div className="footer-left">FooterLeft</div>
-            <div className="footer-center">FooterCenter</div>
+            <div className="footer-left"></div>
+            <div className="footer-center">Copyright &copy; 2023 Marc Tapp</div>
             <div className="footer-right" onClick={(e)=>{ e.preventDefault();dispatch(toggleForm(true))}}>Have a question?</div>
             
         </div>

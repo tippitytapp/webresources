@@ -8,8 +8,11 @@ import { store } from './store';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-console.log(store.getState())
+
 root.render(
   <Provider store={store}>
-  <Router><AppRouter/></Router></Provider>
+  <Router>
+    <AppRouter/>
+    </Router>
+    </Provider>
 );

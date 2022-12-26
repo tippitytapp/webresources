@@ -17,9 +17,17 @@ export interface TabInterface {
     export default function Tab(props:{displayName:string, id:string, link:string, type:"dropDown" | "staticTab", childrenTabs:Array<any>, active: string}){
         const location = useLocation()
         let active = location.pathname.includes(props?.link)
-        return(
-            <div className={`app-tab tab-${active ? "active":"inactive"}`}>
-                <Link to={props?.link}>{props?.displayName}</Link>
-            </div>
-        )
+        if(props?.type === "staticTab"){
+            return(
+                <div className={`app-tab tab-${active ? "active":"inactive"}`}>
+                    <Link to={props?.link} >{props?.displayName}</Link>
+                </div>
+            )
+        } else {
+            return (
+                <div className={`app-tab tab-${active ? "active" : "inactive"}`}>
+                    <Link to={props?.link}>{props?.displayName} {`\uF27E`}</Link>
+                </div>
+            )
+        }
     }
